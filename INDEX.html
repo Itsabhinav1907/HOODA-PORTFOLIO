@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aman Hooda — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa7bf;
+      --accent:#7c3aed;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,#071021 0%, #051022 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .container{max-width:1100px;margin:40px auto;padding:28px}
+    header{
+      display:flex;align-items:center;justify-content:space-between;margin-bottom:28px
+    }
+    .brand{display:flex;gap:16px;align-items:center}
+    .avatar{
+      width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#2dd4bf);display:flex;align-items:center;justify-content:center;font-weight:700;color:#041022;font-size:26px
+    }
+    h1{margin:0;font-size:24px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+    nav a:hover{color:#fff}
+
+    main{display:grid;grid-template-columns:1fr 320px;gap:28px}
+
+    /* left column */
+    .card{background:var(--card);border-radius:14px;padding:20px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    section + section{margin-top:18px}
+    .about h2,.skills h2,.projects h2,.edu h2{display:flex;align-items:center;gap:10px}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-size:13px;margin:6px 6px 6px 0}
+
+    .skills-grid{display:flex;flex-wrap:wrap}
+    .skill{min-width:120px;padding:8px;border-radius:8px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));margin:6px 8px;color:var(--muted);font-weight:600}
+
+    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.012), rgba(0,0,0,0.02));margin-bottom:12px}
+    .project h3{margin:0 0 6px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    .timeline{border-left:2px solid rgba(255,255,255,0.03);padding-left:18px}
+    .timeline-item{margin-bottom:12px}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* right column */
+    .profile-card{position:sticky;top:28px}
+    .profile-card .meta{display:flex;flex-direction:column;gap:8px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);font-size:13px}
+
+    /* contact form */
+    form{display:flex;flex-direction:column;gap:12px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    input::placeholder,textarea::placeholder{color:var(--muted)}
+    button{border:none;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#06b6d4);color:#041022;font-weight:700;cursor:pointer}
+    .muted{color:var(--muted)}
+
+    footer{margin-top:24px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:900px){
+      main{grid-template-columns:1fr;}
+      .profile-card{position:static}
+      .container{margin:18px;padding:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">AH</div>
+        <div>
+          <h1>Aman Hooda</h1>
+          <p class="lead">B.Tech CSE — AI/ML (Student) · Christ University</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div>
+        <section id="about" class="card about">
+          <h2>About</h2>
+          <p>A dedicated engineering student pursuing B.Tech at Christ University, Kengeri Campus. Passionate about AI and emerging technologies. I enjoy solving problems, building practical projects, and learning new tools. A disciplined team player with experience in competitive sports and technical societies.</p>
+
+          <div style="margin-top:12px">
+            <span class="tag">CSE - AI/ML</span>
+            <span class="tag">Christ University</span>
+            <span class="tag">Intern: Jio Platforms (Cybersecurity)</span>
+          </div>
+        </section>
+
+        <section class="card skills" id="skills">
+          <h2>Technical & Soft Skills</h2>
+          <div style="margin-top:10px">
+            <strong class="small">Technical</strong>
+            <div class="skills-grid" style="margin-top:8px">
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+              <div class="skill">JavaScript</div>
+              <div class="skill">Java</div>
+              <div class="skill">Python</div>
+              <div class="skill">C / C++</div>
+              <div class="skill">MySQL</div>
+              <div class="skill">Unity</div>
+            </div>
+
+            <div style="margin-top:10px">
+              <strong class="small">Soft</strong>
+              <div style="margin-top:8px">
+                <span class="pill">Communication</span>
+                <span class="pill">Leadership</span>
+                <span class="pill">Teamwork</span>
+                <span class="pill">Decision-making</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="card projects">
+          <h2>Projects</h2>
+
+          <div class="project">
+            <h3>Portfolio Website</h3>
+            <p class="muted">A personal portfolio website showcasing projects and resume. Built using HTML, CSS and JavaScript.</p>
+          </div>
+
+          <div class="project">
+            <h3>Annual Report Portal</h3>
+            <p class="muted">A web portal for generating and viewing annual reports. Focus on clean presentation and accessibility.</p>
+          </div>
+
+          <div class="project">
+            <h3>Notepad Clone</h3>
+            <p class="muted">A lightweight browser-based notepad app with save/load features.</p>
+          </div>
+
+          <div class="project">
+            <h3>Mediconnect</h3>
+            <p class="muted">A small project connecting patients with medical resources (prototype / concept stage).</p>
+          </div>
+
+        </section>
+
+        <section id="education" class="card edu">
+          <h2>Education</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <strong>Christ University, Bangalore</strong>
+              <div class="small">B.Tech — CSE AI/ML · July 2023 - Present</div>
+            </div>
+            <div class="timeline-item">
+              <strong>Army Public School, Agra</strong>
+              <div class="small">Class 12th · Completed 2022</div>
+            </div>
+            <div class="timeline-item">
+              <strong>Army Public School, Jaipur</strong>
+              <div class="small">Class 10th · Completed 2020</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Internship & Certifications</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <strong>Intern — Cybersecurity Dept, Jio Platforms Ltd.</strong>
+              <div class="small">April–May 2025 · Worked on 'Agentic AI Based Attack Surface Management'. Confidential project work and documentation.</div>
+            </div>
+          </div>
+
+          <div style="margin-top:10px">
+            <strong class="small">Selected Certificates</strong>
+            <div style="margin-top:8px;color:var(--muted)">
+              Oracle Academy — Java fundamentals<br>
+              Cisco Networking Academy — Introduction to Data Science & Python<br>
+              IBM — Build Chatbot Level 1
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Achievements & Extracurriculars</h2>
+          <ul style="color:var(--muted)">
+            <li>1st Place — National Level Basketball Tournament (2018)</li>
+            <li>Participated: PLEASE HACK Hackathon, Smart India Hackathon</li>
+            <li>NCC 'B' Certificate</li>
+            <li>Active member — IEEE Computer Society</li>
+          </ul>
+        </section>
+
+      </div>
+
+      <aside class="profile-card">
+        <div class="card">
+          <div style="display:flex;gap:14px;align-items:center;margin-bottom:10px">
+            <div style="width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;font-weight:800;color:#041022">AH</div>
+            <div>
+              <div style="font-weight:700">Aman Hooda</div>
+              <div class="small">CSE — AI/ML · Christ University</div>
+            </div>
+          </div>
+
+          <div class="meta">
+            <div><strong class="small">Location</strong><div class="muted">Bangalore, India</div></div>
+            <div><strong class="small">Availability</strong><div class="muted">Open to internships & collaborative projects</div></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <a href="#contact" style="text-decoration:none"><button style="width:100%">Contact Me</button></a>
+          </div>
+
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3 style="margin:0 0 8px">Contact</h3>
+          <p class="small muted">Fill the form below — phone and email are kept private on this public page.</p>
+          <form id="contactForm">
+            <input id="name" placeholder="Your name" required />
+            <input id="email" placeholder="Your email" type="email" required />
+            <textarea id="message" rows="4" placeholder="Your message" required></textarea>
+            <button type="submit">Send message</button>
+            <div id="formMsg" class="small muted" style="margin-top:8px"></div>
+          </form>
+        </div>
+
+        <div class="card" style="margin-top:16px;text-align:center">
+          <h3 style="margin-bottom:8px">Extra</h3>
+          <div class="small muted">Member: IEEE Computer Society<br>NCC 'B' Certificate<br>National-level sports experience</div>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      AMAN HOODA 
+    </footer>
+  </div>
+
+  <script>
+    // Contact form: stores submissions to localStorage (keeps private contact details off the page)
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('formMsg');
+    form.addEventListener('submit', (e) =>{
+      e.preventDefault();
+      const data = {name: document.getElementById('name').value.trim(), email: document.getElementById('email').value.trim(), message: document.getElementById('message').value.trim(), date: new Date().toISOString()};
+      // Save to localStorage (for demo). Replace with API endpoint when ready.
+      const list = JSON.parse(localStorage.getItem('contacts_aman') || '[]');
+      list.unshift(data);
+      localStorage.setItem('contacts_aman', JSON.stringify(list));
+      form.reset();
+      msg.textContent = 'Thanks! Your message was saved locally. (No email/phone shown on page.)';
+      setTimeout(()=> msg.textContent = '', 5000);
+    });
+  </script>
+</body>
+</html>
